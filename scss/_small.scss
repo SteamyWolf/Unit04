@@ -1,0 +1,168 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+div#headerWrapper {
+    background-image: url(../images/headerOne1.jpg);
+    background-size: 100%;
+    background-position-y: -3rem;
+    height: 150px;
+    background-repeat: no-repeat;
+
+}
+header {
+    padding: .5rem 2%;
+    color: white;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    background-color: rgb(121, 28, 28);
+}
+nav {
+    
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color: brown;
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+/*----------- MAIN --------------*/
+div#mainWrapper {
+    background-color: rgb(82, 17, 17);
+}
+main {
+    background-color: white;
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+main h1 {
+    margin: 0;
+    padding-top: 1rem;
+}
+
+main p {
+    margin-bottom: 0px;
+    padding-bottom: 1rem;
+}
+
+#bison {
+    position: relative;
+    animation: bisonmoves 5s 2;
+}
+@keyframes bisonmoves {
+    0% {
+        left: 0px;
+    }
+    5% {
+        transform: rotate(-0.1turn);
+    }
+    10% {
+        transform: rotate(0turn)
+    }
+    15% {
+        transform: rotate(-0.1turn);
+    }
+    20% {
+        transform: rotate(0turn)
+    }
+    50% {
+        left: 55vw;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+#wolf {
+    position: relative;
+    animation: wolfHowl 5s 2;
+}
+@keyframes wolfHowl {
+    0% {
+        left: 0px;
+    }
+    30%, 70% {
+        left: 55vw
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+#moon {
+    float: right;
+    opacity: 0%;
+    padding-right: 4%;
+    position: relative;
+    animation: moonAppear 5s 2;
+}
+@keyframes moonAppear {
+    0% {
+        opacity: 0%;
+    }
+    30%, 70% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/*----------- FOOTER --------------*/
+div#footerWrapper {
+    background-color: rgb(121, 28, 28);
+
+}
+footer {
+    padding: .5rem 2%;
+    text-align: center;
+    color: white;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
